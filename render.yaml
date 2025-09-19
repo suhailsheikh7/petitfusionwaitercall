@@ -3,7 +3,6 @@ services:
     name: petitfusionwaitercall-server
     env: node
     plan: free
-    
     buildCommand: "cd server && npm install"
     startCommand: "cd server && npm start"
     envVars:
@@ -13,8 +12,8 @@ services:
         sync: false
       - key: VAPID_PRIVATE_KEY
         sync: false
-        -key : PORT
-        value : "5000"
+      - key: PORT
+        value: "5000"
 
   - type: web
     name: petitfusionwaitercall-client
